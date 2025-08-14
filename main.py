@@ -1,8 +1,7 @@
 from typing import Union
 from fastapi import FastAPI
+from routes.router_notification import Notification_Router
 
 app = FastAPI()
 
-@app.get("/")
-def read_root(): 
-    return {"status" : "Hello world"}
+Noti_router = Notification_Router(app)
